@@ -1,0 +1,17 @@
+<div id="main-content">
+
+  <div class="content-wrapper">
+    <h4>Venus IAM</h4>
+    <div class="login-panel">
+      <form class="login-form" [formGroup]="loginForm">
+        <input type="text" formControlName="username" placeholder="Username" />
+        <input type="password" formControlName="password" placeholder="********" />
+
+        <button (click)="doLogin()">Login</button>
+        <p>Forgot password?</p>
+      </form>
+    </div>
+
+  </div>
+
+</div>
