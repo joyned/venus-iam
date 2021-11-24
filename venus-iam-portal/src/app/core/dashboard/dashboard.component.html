@@ -1,31 +1,41 @@
 <div id="dashboard-main-content">
     <div class="header-wrapper">
         <div class="header-content">
-            <div class="header-logo">
-                <h4>IAM</h4>
+            <div class="title">
+                <span>Venus IAM</span>
             </div>
 
-            <div class="header-menu">
-                <div class="icon-with-span" routerLink="/dashboard/users">
-                    <mat-icon>person</mat-icon>
-                    <span>Users</span>
-                </div>
-
-                <div class="icon-with-span" routerLink="/dashboard/roles">
-                    <mat-icon>security</mat-icon>
-                    <span>Roles</span>
-                </div>
-
-                <div class="icon-with-span" routerLink="/dashboard/groups">
-                    <mat-icon>groups</mat-icon>
-                    <span>Groups</span>
-                </div>
-            </div>
-
-            <div class="header-user">
+            <div class="user">
                 <div class="icon-with-span">
                     <span>Bruno da Silveira B. Godoy</span>
                     <mat-icon>arrow_drop_down</mat-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-menu">
+                <div class="menu-item" routerLink="/dashboard/users">
+                    <div class="icon-with-span">
+                        <mat-icon>person</mat-icon>
+                        <span>Users</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" routerLink="/dashboard/roles">
+                    <div class="icon-with-span">
+                        <mat-icon>security</mat-icon>
+                        <span>Roles</span>
+                    </div>
+                </div>
+
+                <div class="menu-item" routerLink="/dashboard/groups">
+                    <div class="icon-with-span">
+                        <mat-icon>groups</mat-icon>
+                        <span>Groups</span>
+                    </div>
                 </div>
             </div>
         </div>

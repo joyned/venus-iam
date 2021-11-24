@@ -4,57 +4,60 @@
     
     .header-wrapper {
         color: white;
-        background-color: var(--primary-color);
-        height: 100px;
+        background-color: #1469c3;
+        height: 50px;
         width: 100%;
+        display: flex;
+        align-items: center;
 
         .header-content {
             display: flex;
-            height: 100%;
-            margin-left: 60px;
-            margin-right: 60px;
+            width: 100%;
+            justify-content: space-between;
 
-            .header-logo {
-                padding: 40px;
-                width: 20%;
+            .title {
+                margin-left: 25px;
+                span {
+                    font-size: xx-large;
+                    font-weight: 900;
+                    font-variant: all-petite-caps;
+                }
             }
 
-            .header-menu {
-                width: 60%;
-                display: flex;
-                align-content: center;
-                align-items: center;
-                justify-content: center;
+            .user {
+                margin-right: 25px;
+            }
+        }
+    }
 
-                .icon-with-span {
-                    margin: 3%;
-                    height: 60px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: baseline;
-                    flex-wrap: wrap;
-                    align-content: space-around;
-                }
+    .sidebar {
+        background: #1f1f1f;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 225px;
+        height: 100%;
+        padding: 20px 0;
+        transition: all 0.5s ease;
 
-                .icon-with-span:hover {
-                    cursor: pointer;
-                }
-
-                button {
-                    background: none;
-                    border: none;
+        .sidebar-content {
+            .sidebar-menu {
+                .menu-item {
                     color: white;
+                    padding: 10px;
+
+                    .icon-with-span {
+                        margin-left: 15px;
+                        span{
+                            margin-left: 20px;
+                        }
+                    }
                 }
 
-                button:hover{
+                .menu-item:hover {
+                    background-color: #1469c3;
                     cursor: pointer;
                 }
-            }
-            
-            .header-user {
-                text-align: end;
-                padding: 40px 80px 40px 40px;
-                width: 20%;
             }
         }
     }
