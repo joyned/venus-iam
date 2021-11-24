@@ -1,0 +1,37 @@
+<div id="dashboard-main-content">
+    <div class="header-wrapper">
+        <div class="header-content">
+            <div class="header-logo">
+                <h4>IAM</h4>
+            </div>
+
+            <div class="header-menu">
+                <div class="icon-with-span" routerLink="/dashboard/users">
+                    <mat-icon>person</mat-icon>
+                    <span>Users</span>
+                </div>
+
+                <div class="icon-with-span" routerLink="/dashboard/roles">
+                    <mat-icon>security</mat-icon>
+                    <span>Roles</span>
+                </div>
+
+                <div class="icon-with-span" routerLink="/dashboard/groups">
+                    <mat-icon>groups</mat-icon>
+                    <span>Groups</span>
+                </div>
+            </div>
+
+            <div class="header-user">
+                <div class="icon-with-span">
+                    <span>Bruno da Silveira B. Godoy</span>
+                    <mat-icon>arrow_drop_down</mat-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-wrapper">
+        <router-outlet></router-outlet>
+    </div>
+</div>

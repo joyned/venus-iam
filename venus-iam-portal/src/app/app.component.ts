@@ -7,23 +7,7 @@ import { ErrorStateMatcher } from '@angular/material/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  public loginForm: FormGroup;
-
-  ngOnInit(): void {
-    this.initForm();
-  }
-
-  private initForm() {
-    this.loginForm = new FormGroup({
-      username: new FormControl(),
-      password: new FormControl()
-    });
-  }
-
-  public doLogin(){
-    
-  }
 
 }

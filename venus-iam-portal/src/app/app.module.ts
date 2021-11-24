@@ -1,17 +1,28 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSliderModule } from '@angular/material/slider';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatInputModule } from '@angular/material/input';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+import { LoginComponent } from './core/login/login.component';
+import { DashboardComponent } from './core/dashboard/dashboard.component';
+import { UsersComponent } from './pages/users/users.component';
+import { RolesComponent } from './pages/roles/roles.component';
+import { GroupsComponent } from './pages/groups/groups.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    DashboardComponent,
+    UsersComponent,
+    RolesComponent,
+    GroupsComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +31,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatSliderModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
