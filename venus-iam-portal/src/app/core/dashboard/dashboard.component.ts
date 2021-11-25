@@ -41,6 +41,10 @@ export class DashboardComponent implements OnInit, AfterContentChecked {
     return currentDashPath;
   }
 
+  public getItemMenuStyleClass(currentPath: string) {
+    return this.currentRoute.startsWith(currentPath) ? 'menu-item-selected' : '';
+  }
+
   public logout() {
     this.router.navigateByUrl('/');
   }

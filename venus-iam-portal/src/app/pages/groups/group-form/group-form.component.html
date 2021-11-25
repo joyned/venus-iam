@@ -13,9 +13,10 @@
                     <div cdkDropListGroup>
                         <div class="venus-dragdrop-container">
                             <p style="margin-top: 30px;"><strong>Roles</strong></p>
-                            <div cdkDropList [cdkDropListData]="avaliableRoles" class="venus-dragdrop-list" cdkDropListSortingDisabled
-                                (cdkDropListDropped)="drop($event)">
-                                <div class="venus-dragdrop-box" *ngFor="let item of avaliableRoles" cdkDrag>{{item.name}}</div>
+                            <div cdkDropList [cdkDropListData]="avaliableRoles" class="venus-dragdrop-list"
+                                cdkDropListSortingDisabled (cdkDropListDropped)="drop($event)">
+                                <div class="venus-dragdrop-box" *ngFor="let item of avaliableRoles" cdkDrag>
+                                    {{item.name}}</div>
                             </div>
                         </div>
 
@@ -24,9 +25,21 @@
 
                             <div cdkDropList [cdkDropListData]="selectedRoles" class="venus-dragdrop-list"
                                 (cdkDropListDropped)="drop($event)">
-                                <div class="venus-dragdrop-box" *ngFor="let item of selectedRoles" cdkDrag>{{item.name}}</div>
+                                <div class="venus-dragdrop-box" *ngFor="let item of selectedRoles" cdkDrag>{{item.name}}
+                                </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="button">
+                        <button mat-raised-button>
+                            <mat-icon>save</mat-icon>
+                            Save
+                        </button>
+                        <button mat-raised-button style="margin-left: 10px;" class="red">
+                            <mat-icon>close</mat-icon>
+                            Cancel
+                        </button>
                     </div>
                 </form>
             </div>
