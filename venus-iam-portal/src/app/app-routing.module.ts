@@ -5,11 +5,13 @@ import { DashboardComponent } from './core/dashboard/dashboard.component';
 import { UsersComponent } from './pages/users/users.component';
 import { RolesComponent } from './pages/roles/roles.component';
 import { GroupsComponent } from './pages/groups/groups.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   {
     path: 'dashboard', component: DashboardComponent, children: [
+      { path: '', component: HomeComponent },
       { path: 'users', component: UsersComponent },
       { path: 'roles', component: RolesComponent },
       { path: 'groups', component: GroupsComponent }

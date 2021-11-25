@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DashboardService } from 'src/app/shared/services/dashboard.service';
 
 @Component({
   selector: 'app-roles',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RolesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dashService: DashboardService) { }
 
   ngOnInit(): void {
+    this.dashService.setDashboardTitle("Roles");
   }
 
 }

@@ -17,6 +17,7 @@
 
             .title {
                 margin-left: 25px;
+                cursor: pointer;
                 span {
                     font-size: xx-large;
                     font-weight: 900;
@@ -26,6 +27,13 @@
 
             .user {
                 margin-right: 25px;
+
+                button {
+                    background: none;
+                    border: none;
+                    color: white;
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -55,16 +63,66 @@
                 }
 
                 .menu-item:hover {
-                    background-color: #1469c3;
+                    // background-color: #1469c3;
                     cursor: pointer;
+                }
+
+                .menu-item-selected {
+                    background-color: #1469c3;
+                }
+            }
+
+            .sidebar-footer {
+                position: fixed;
+                bottom: 0;
+                width: 225px;
+                text-align: center;
+                margin-bottom: 10px;
+                
+                span {
+                    color: white;
                 }
             }
         }
     }
 
     .main-wrapper {
-        margin-left: 100px;
-        margin-right: 100px;
-        margin-top: 40px;
+        margin-left: 225px;
+
+        .header {
+            margin-bottom: 25px;
+
+            .header-content {
+                margin: 0;
+                border-bottom: 1px solid transparent;
+                text-align: left;
+                background-color: #fff;
+                padding: 32px 22px 32px 15px;
+
+                h1 {
+                    font-size: 36px;
+                    margin: 0;
+
+                    small {
+                        font-size: 65%;
+                        font-weight: 400;
+                        line-height: 1;
+                        color: #777;
+                    }
+                }
+            }
+
+            .subheader-content {
+                background-color: #f5f5f5;
+                box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+                padding: 12px 10px 12px 20px;
+                margin-bottom: 20px;
+                color: #337ab7;
+            }
+        }
+
+        .main-content {
+            padding: 15px;
+        }
     }
 }

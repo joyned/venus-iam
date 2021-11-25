@@ -1,14 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
-    --primary-color: #444e5d;
-    --secondary-color: #4e5764;
+    --primary-color: #1469c3;
+    --secondary-color: #1f1f1f;
     --third-color: #4eaa60;
+    
+    --red-color: #d72121;
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    font-family: 'Open Sans', sans-serif !important;
+}
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, .h4 .small, .h4 small, .h5 .small, .h5 small, .h6 .small, .h6 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, h5 small, h6 .small, h6 small {
+    font-weight: 400;
+    line-height: 1;
+    color: #777;
+    font-family: 'Open Sans', sans-serif !important;
+}
 
 .icon-with-span {
     span {
@@ -22,4 +40,80 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     position: absolute;
     margin-top: 5px;
     margin-left: 5px;
+}
+
+.blue-shimmer {
+    .ngx-shimmer {
+        background-color: var(--primary-color) !important;
+        background-image: linear-gradient(to right, #1469c3 0, #2470c3 20%, #3176c2 40%, #3e7dc1 60%, #4a83c0 100%) !important;
+    }
+}
+
+.blue-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.red-button {
+    background-color: var(--red-color);
+    color: white;
+}
+
+.mat-raised-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar{
+    background: #4680bd !important;
+}
+
+.mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: var(--primary-color) !important;
+}
+
+.mat-dialog-container {
+    padding: 0 !important;
+    overflow: hidden !important;
+
+    .mat-dialog-title {
+        background-color: var(--primary-color) !important;
+        padding: 10px !important;
+        color: white !important;
+    }
+
+    .mat-dialog-content, .mat-dialog-actions {
+        margin: 0 !important;
+        padding: 10px 40px;
+    }
+}
+
+.venus-card {
+    padding: 0 !important;
+    width: 100%;
+    border-radius: 5px;
+
+    .mat-card-header {
+        background-color: var(--primary-color);
+        color: white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .mat-card-title {
+        margin: 16px;
+    }
+
+    .mat-card-content {
+        padding: 20px;
+
+        .chart {
+            height: 25em;
+        }
+    }
+}
+
+.mat-header-cell {
+    font-weight: bolder;
+    font-size: larger;
 }

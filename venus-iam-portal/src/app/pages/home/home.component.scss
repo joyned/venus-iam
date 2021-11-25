@@ -1,0 +1,59 @@
+#home-main-content {
+    .count-chart {
+        .content-wrapper {
+            mat-grid-tile {
+                background: var(--primary-color)
+              }
+
+            .square-chart {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-wrap: nowrap;
+                align-content: center;
+                align-items: center;
+
+                .panel-left {
+                    width: 100px;
+                    height: 100px;
+                    background: #0866C6;
+                    border: 2px solid #4590DA;
+                    overflow: hidden;
+                    margin: 12px;
+
+                    .mat-icon {
+                        font-size: 3em;
+                        color: rgba(255, 255, 255, 0.69);
+                        padding: 29px 0;
+                        margin-bottom: 30px;
+                        margin-left: 30px;
+                    }
+                }
+
+                .panel-right {
+                    height: 124px;
+                    background: transparent;
+                    margin-bottom: 0;
+                    color: #FFFFFF;
+                    float: left;
+                    text-align: left;
+                    padding-left: 20px;
+                    font-size: 16px;
+                    text-shadow: none;
+                    font-weight: 100;
+                     
+                    h3 {
+                        font-size: 40px;
+                        padding: 30px 10px 0px 0px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+
+    .linear-chart-content {
+        margin-top: 20px;
+    }
+}
+

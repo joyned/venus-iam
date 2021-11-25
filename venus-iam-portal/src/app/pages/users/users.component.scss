@@ -1,3 +1,22 @@
 #users-main-content {
-    
+    .card-content {
+        min-height: 20em;
+
+        .button {
+            text-align: right;
+            margin-top: 15px;
+        }
+    }
+
+    .action-icon {
+        cursor: pointer;
+        margin-right: 15px;
+    }
+
+    .blue {
+        color: var(--primary-color) !important;
+    }
+    .red {
+        color: var(--red-color);
+    }
 }

@@ -1,15 +1,25 @@
 <div id="dashboard-main-content">
     <div class="header-wrapper">
         <div class="header-content">
-            <div class="title">
+            <div class="title" (click)="routeByUrl('/dashboard')">
                 <span>Venus IAM</span>
             </div>
 
             <div class="user">
-                <div class="icon-with-span">
-                    <span>Bruno da Silveira B. Godoy</span>
-                    <mat-icon>arrow_drop_down</mat-icon>
-                </div>
+                <button mat-button [matMenuTriggerFor]="menu">
+                    <div class="icon-with-span">
+                        <span>Bruno da Silveira B. Godoy</span>
+                        <mat-icon>arrow_drop_down</mat-icon>
+                    </div>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="logout()">
+                        <div class="icon-with-span">
+                            <mat-icon>logout</mat-icon>
+                            <span>Sair</span>
+                        </div>
+                    </button>
+                </mat-menu>
             </div>
         </div>
     </div>
@@ -17,31 +27,50 @@
     <div class="sidebar">
         <div class="sidebar-content">
             <div class="sidebar-menu">
-                <div class="menu-item" routerLink="/dashboard/users">
+                <div class="menu-item" (click)="routeByUrl('/dashboard/users')"
+                    [ngClass]="currentRoute === '/dashboard/users' ? 'menu-item-selected' : ''">
                     <div class="icon-with-span">
                         <mat-icon>person</mat-icon>
                         <span>Users</span>
                     </div>
                 </div>
 
-                <div class="menu-item" routerLink="/dashboard/roles">
+                <div class="menu-item" (click)="routeByUrl('/dashboard/roles')"
+                    [ngClass]="currentRoute === '/dashboard/roles' ? 'menu-item-selected' : ''">
                     <div class="icon-with-span">
                         <mat-icon>security</mat-icon>
                         <span>Roles</span>
                     </div>
                 </div>
 
-                <div class="menu-item" routerLink="/dashboard/groups">
+                <div class="menu-item" (click)="routeByUrl('/dashboard/groups')"
+                    [ngClass]="currentRoute === '/dashboard/groups' ? 'menu-item-selected' : ''">
                     <div class="icon-with-span">
                         <mat-icon>groups</mat-icon>
                         <span>Groups</span>
                     </div>
                 </div>
             </div>
+            <div class="sidebar-footer">
+                <span>Venus IAM v1.0.0</span>
+            </div>
         </div>
     </div>
 
     <div class="main-wrapper">
-        <router-outlet></router-outlet>
+        <div class="header">
+            <div class="header-content">
+                <h1>
+                    {{pageTitle}}
+                    <!-- <small>Subtitle</small> -->
+                </h1>
+            </div>
+            <div class="subheader-content">
+                <span>{{getCurrentDashboardPath()}}</span>
+            </div>
+        </div>
+        <div class="main-content">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </div>
