@@ -24,6 +24,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { RolesComponent } from './pages/roles/roles.component';
 import { UserDialogComponent } from './pages/users/user-dialog/user-dialog.component';
 import { UsersComponent } from './pages/users/users.component';
+import { RoleDialogComponent } from './pages/roles/role-dialog/role-dialog.component';
+import { GroupFormComponent } from './pages/groups/group-form/group-form.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,9 @@ import { UsersComponent } from './pages/users/users.component';
     RolesComponent,
     GroupsComponent,
     HomeComponent,
-    UserDialogComponent
+    UserDialogComponent,
+    RoleDialogComponent,
+    GroupFormComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +61,7 @@ import { UsersComponent } from './pages/users/users.component';
     MatDialogModule,
     MatInputModule,
     MatSlideToggleModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

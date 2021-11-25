@@ -13,13 +13,10 @@ import { UserDialogComponent } from './user-dialog/user-dialog.component';
 })
 export class UsersComponent implements AfterViewInit {
 
-  public userList: MatTableDataSource<any>;
+  public userList: any[];
   public displayedColumns: string[] = ['id', 'name', 'lastname', 'login', 'email', 'creationDate', 'actions'];
-  public showDrawer = true;
 
-  @ViewChild(MatSort) sort: MatSort;
-
-  constructor(private dashService: DashboardService, private dialog: MatDialog, private _liveAnnouncer: LiveAnnouncer) { }
+  constructor(private dashService: DashboardService, private dialog: MatDialog) { }
 
   ngAfterViewInit(): void {
     this.dashService.setDashboardTitle("Users");
@@ -30,20 +27,9 @@ export class UsersComponent implements AfterViewInit {
     this.dialog.open(UserDialogComponent);
   }
 
-  announceSortChange(sortState: Sort) {
-    console.log(this.sort);
-    
-    if (sortState.direction) {
-      this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
-    } else {
-      this._liveAnnouncer.announce('Sorting cleared');
-    }
-
-  }
-
   private loadSampleDataWithDelay() {
     setTimeout(() => {
-      this.userList = new MatTableDataSource([
+      this.userList = [
         {
           id: 1,
           name: 'Bruno',
@@ -84,8 +70,7 @@ export class UsersComponent implements AfterViewInit {
           email: 'andre.gomes@test.com',
           creationDate: '26/04/2020'
         },
-      ]);
-      this.userList.sort = this.sort;
+      ];
     }, 3000);
   }
 

@@ -1,0 +1,35 @@
+<div id="group-form-main-content">
+    <mat-card class="venus-card">
+        <mat-card-header>
+            <mat-card-title>{{groupName}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="card-content">
+                <form [formGroup]="formGroup">
+
+                    <p><strong>Group name</strong></p>
+                    <input type="text" class="venus-input">
+
+                    <div cdkDropListGroup>
+                        <div class="venus-dragdrop-container">
+                            <p style="margin-top: 30px;"><strong>Roles</strong></p>
+                            <div cdkDropList [cdkDropListData]="avaliableRoles" class="venus-dragdrop-list" cdkDropListSortingDisabled
+                                (cdkDropListDropped)="drop($event)">
+                                <div class="venus-dragdrop-box" *ngFor="let item of avaliableRoles" cdkDrag>{{item.name}}</div>
+                            </div>
+                        </div>
+
+                        <div class="venus-dragdrop-container">
+                            <p style="margin-top: 30px;"><strong>Selected roles</strong></p>
+
+                            <div cdkDropList [cdkDropListData]="selectedRoles" class="venus-dragdrop-list"
+                                (cdkDropListDropped)="drop($event)">
+                                <div class="venus-dragdrop-box" *ngFor="let item of selectedRoles" cdkDrag>{{item.name}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

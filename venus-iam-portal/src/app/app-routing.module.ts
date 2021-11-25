@@ -6,6 +6,7 @@ import { UsersComponent } from './pages/users/users.component';
 import { RolesComponent } from './pages/roles/roles.component';
 import { GroupsComponent } from './pages/groups/groups.component';
 import { HomeComponent } from './pages/home/home.component';
+import { GroupFormComponent } from './pages/groups/group-form/group-form.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
       { path: '', component: HomeComponent },
       { path: 'users', component: UsersComponent },
       { path: 'roles', component: RolesComponent },
-      { path: 'groups', component: GroupsComponent }
+      { path: 'groups', component: GroupsComponent },
+      { path: 'groups/:id', component: GroupFormComponent }
     ]
   }
 ];
