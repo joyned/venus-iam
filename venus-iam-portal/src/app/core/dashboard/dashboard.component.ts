@@ -36,6 +36,7 @@ export class DashboardComponent implements OnInit, AfterContentChecked {
       if (path) {
         currentDashPath += ' / '
         currentDashPath += path.charAt(0).toUpperCase() + path.slice(1);
+        
       }
     });
     return currentDashPath;

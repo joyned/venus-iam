@@ -50,6 +50,14 @@
                         <span>Groups</span>
                     </div>
                 </div>
+
+                <div class="menu-item" (click)="routeByUrl('/dashboard/settings')"
+                    [ngClass]="getItemMenuStyleClass('/dashboard/settings')">
+                    <div class="icon-with-span">
+                        <mat-icon>settings</mat-icon>
+                        <span>Settings</span>
+                    </div>
+                </div>
             </div>
             <div class="sidebar-footer">
                 <span>Venus IAM v1.0.0</span>

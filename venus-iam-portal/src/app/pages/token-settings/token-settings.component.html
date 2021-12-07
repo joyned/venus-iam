@@ -1,0 +1,25 @@
+<div id="token-settings-main-content">
+    <mat-card class="venus-card">
+        <mat-card-header>
+            <mat-card-title>Token settings</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="card-content">
+                <form>
+                    <p><strong>Refresh Token</strong></p>
+                    <mat-slide-toggle></mat-slide-toggle>
+
+                    <p><strong>Access Token Lifespan</strong></p>
+                    <div class="flex-display">
+                        <input type="number" min="0" class="venus-input">
+                        <select name="" id="" class="venus-input" style="width: 150px; margin-left: 10px;">
+                            <option *ngFor="let option of lifeTimeOptions" [value]="option.value">{{option.name}}
+                            </option>
+                        </select>
+                    </div>
+
+                </form>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

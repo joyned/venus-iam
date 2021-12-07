@@ -1,10 +1,7 @@
-import { LiveAnnouncer } from '@angular/cdk/a11y';
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { MatSort, Sort } from '@angular/material/sort';
-import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { DashboardService } from 'src/app/shared/services/dashboard.service';
-import { UserDialogComponent } from './user-dialog/user-dialog.component';
 
 @Component({
   selector: 'app-users',
@@ -16,16 +13,17 @@ export class UsersComponent implements AfterViewInit {
   public userList: any[];
   public displayedColumns: string[] = ['id', 'name', 'lastname', 'login', 'email', 'creationDate', 'actions'];
 
-  constructor(private dashService: DashboardService, private dialog: MatDialog) { }
+  constructor(private dashService: DashboardService, private router: Router) { }
 
   ngAfterViewInit(): void {
     this.dashService.setDashboardTitle("Users");
     this.loadSampleDataWithDelay();
   }
 
-  public openDialog() {
-    this.dialog.open(UserDialogComponent);
+  public routeToForm(id: number) {
+    this.router.navigateByUrl('/dashboard/users/' + id);
   }
+
 
   private loadSampleDataWithDelay() {
     setTimeout(() => {

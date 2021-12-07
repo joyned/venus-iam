@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { DashboardService } from 'src/app/shared/services/dashboard.service';
-import { RoleDialogComponent } from './role-dialog/role-dialog.component';
 
 @Component({
   selector: 'app-roles',
@@ -13,15 +12,15 @@ export class RolesComponent implements OnInit {
   public displayedColumns: string[] = ['id', 'name', 'creationDate', 'actions'];
   public roleList: any[];
 
-  constructor(private dashService: DashboardService, private dialog: MatDialog) { }
+  constructor(private dashService: DashboardService, private router: Router) { }
 
   ngOnInit(): void {
     this.dashService.setDashboardTitle("Roles");
     this.loadSampleDataWithDelay();
   }
 
-  public openDialog() {
-    this.dialog.open(RoleDialogComponent);
+  public routeToForm(id: number) {
+    this.router.navigateByUrl('/dashboard/roles/' + id);
   }
 
   private loadSampleDataWithDelay() {

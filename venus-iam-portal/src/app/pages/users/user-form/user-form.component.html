@@ -1,0 +1,40 @@
+<div id="user-form-main-content">
+    <mat-card class="venus-card">
+        <mat-card-header>
+            <mat-card-title>Role</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="card-content">
+                <form [formGroup]="userForm">
+                    <p><strong>Name</strong></p>
+                    <input type="text" class="venus-input">
+
+                    <p><strong>Lastname</strong></p>
+                    <input type="text" class="venus-input">
+
+                    <p><strong>Login</strong></p>
+                    <input type="text" class="venus-input">
+
+                    <p><strong>E-mail</strong></p>
+                    <input type="text" class="venus-input">
+
+                    <p><strong>Password</strong></p>
+                    <input type="text" class="venus-input">
+
+                    <mat-slide-toggle>Temporary password?</mat-slide-toggle>
+
+                    <div class="button">
+                        <button mat-raised-button>
+                            <mat-icon>save</mat-icon>
+                            Save
+                        </button>
+                        <button mat-raised-button style="margin-left: 10px;" class="red">
+                            <mat-icon>close</mat-icon>
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-role-dialog',
-  templateUrl: './role-dialog.component.html',
-  styleUrls: ['./role-dialog.component.scss']
+  selector: 'app-user-form',
+  templateUrl: './user-form.component.html',
+  styleUrls: ['./user-form.component.scss']
 })
-export class RoleDialogComponent implements OnInit {
+export class UserFormComponent implements OnInit {
 
-  public roleForm: FormGroup;
+  public userForm: FormGroup;
 
   constructor() { }
 
@@ -17,13 +17,13 @@ export class RoleDialogComponent implements OnInit {
   }
 
   private initForm() {
-    this.roleForm = new FormGroup({
+    this.userForm = new FormGroup({
       name: new FormControl(),
       lastname: new FormControl(),
       login: new FormControl(),
       email: new FormControl(),
       password: new FormControl()
-    });
+    })
   }
 
 }
